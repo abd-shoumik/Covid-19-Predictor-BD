@@ -8,7 +8,8 @@
 * To collect data from authentic sources for helping public health researchers.
 
 ## Directory Structure
-* ***Covid_19 predictor.py: Python file containing the Machine Learning model to predict every next 3 days cases and death predictions.***
+* ***Covid_19 predictor.py : Python file containing the Machine Learning model to predict every next 3 days cases and death predictions.***
+* ***Death_fig.png,Cases_fig.png : Visualize so far deaths & cases and next 3 days prediction figures***
 * Covid-19_in_Bangladesh: Contains datasets of Coronavirus(COVID-19) Cases in Bangladesh(file format.csv)
 
 
