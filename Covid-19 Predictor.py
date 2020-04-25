@@ -33,12 +33,12 @@ days_since_first_death = np.array([i for i in range(len(deaths.index))]).reshape
 bd_deaths = np.array(deaths).reshape(-1, 1)
 
 #Preparing indexes to predict next 3  days
-days_in_future = 3
+days_in_future = 1
 future_forcast = np.array([i for i in range(len(cases.index)+days_in_future)]).reshape(-1, 1)
-adjusted_dates = future_forcast[:-3]
+adjusted_dates = future_forcast[:-1]
 
 future_forcast_deaths = np.array([i for i in range(len(deaths.index)+days_in_future)]).reshape(-1, 1)
-adjusted_dates_deaths = future_forcast_deaths[:-3]
+adjusted_dates_deaths = future_forcast_deaths[:-1]
 
 #Splitting data into train and test to evaluate our model
 from sklearn.model_selection import train_test_split
@@ -125,8 +125,8 @@ plt.show();
 
 #picking for api
 import pickle
-pickle.dump(linear_pred[-3:],open('model_cases.pkl','wb'))
-pickle.dump(linear_pred_death[-3:],open('model_deaths.pkl','wb'))
+pickle.dump(linear_pred[-2:],open('model_cases.pkl','wb'))
+pickle.dump(linear_pred_death[-2:],open('model_deaths.pkl','wb'))
 pickle.dump(cases_pred_vsl,open('cases_figure.pkl','wb'))
 pickle.dump(deaths_pred_vsl,open('deaths_figure.pkl','wb'))
 
