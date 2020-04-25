@@ -89,7 +89,7 @@ plt.legend(loc = "upper left" , frameon = True, ncol = 2 , fancybox = True, fram
 plt.show();
 
 # Transform our death data for polynomial regression
-poly_death = PolynomialFeatures(degree=3)
+poly_death = PolynomialFeatures(degree=4)
 poly_X_train_death = poly_death.fit_transform(X_train_death)
 poly_X_test_death = poly_death.fit_transform(X_test_death)
 poly_future_forcast_death = poly_death.fit_transform(future_forcast_deaths)    
