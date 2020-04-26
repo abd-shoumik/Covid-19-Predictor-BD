@@ -54,7 +54,7 @@ from sklearn.metrics import mean_absolute_error
 
 
  # Transform our cases data for polynomial regression
-poly = PolynomialFeatures(degree=4)
+poly = PolynomialFeatures(degree=6)
 poly_X_train = poly.fit_transform(X_train)
 poly_X_test = poly.fit_transform(X_test)
 poly_future_forcast = poly.fit_transform(future_forcast)
@@ -72,7 +72,7 @@ cases_pred_vsl=plt.figure(figsize=(13, 7))
 plt.plot(adjusted_dates , bd_cases , label = "Real cases")
 plt.plot(future_forcast , linear_pred , label = "Polynomial Regression Predictions", linestyle='dashed', color='orange')
 
-plt.title('Cases in Bangladesh over the time: Predicting Next 3 days', size=20)
+plt.title('Cases in Bangladesh over the time: Predicting Next  day', size=20)
 plt.xlabel('Days Since 3/08/20', size=20)
 plt.ylabel('Cases', size=20)
 plt.xticks(size=15)
@@ -89,7 +89,7 @@ plt.legend(loc = "upper left" , frameon = True, ncol = 2 , fancybox = True, fram
 plt.show();
 
 # Transform our death data for polynomial regression
-poly_death = PolynomialFeatures(degree=4)
+poly_death = PolynomialFeatures(degree=5)
 poly_X_train_death = poly_death.fit_transform(X_train_death)
 poly_X_test_death = poly_death.fit_transform(X_test_death)
 poly_future_forcast_death = poly_death.fit_transform(future_forcast_deaths)    
@@ -108,7 +108,7 @@ plt.plot(adjusted_dates_deaths, bd_deaths, label = "Real deaths")
 plt.plot(future_forcast_deaths , linear_pred_death , label = "Polynomial Regression Predictions" ,
          linestyle='dashed' , color='red')
 
-plt.title('Deaths in Bangladesh over the time: Predicting Next 3 days', size=20)
+plt.title('Deaths in Bangladesh over the time: Predicting Next day', size=20)
 plt.xlabel('Days Since 03/08/20', size=20)
 plt.ylabel('Deaths', size=20)
 plt.xticks(size=15)
