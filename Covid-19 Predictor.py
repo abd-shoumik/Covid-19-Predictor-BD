@@ -127,12 +127,18 @@ plt.show();
 import pickle
 pickle.dump(linear_pred[-2:],open('model_cases.pkl','wb'))
 pickle.dump(linear_pred_death[-2:],open('model_deaths.pkl','wb'))
+pickle.dump(linear_pred,open('model_cases_plus_pred.pkl','wb'))
+pickle.dump(linear_pred_death,open('model_deaths_plus_pred.pkl','wb'))
+
 pickle.dump(cases_pred_vsl,open('cases_figure.pkl','wb'))
 pickle.dump(deaths_pred_vsl,open('deaths_figure.pkl','wb'))
 
-#loading the dumped files
+'''#loading the dumped files
 loaded_cases=pickle.load(open('model_cases.pkl','rb'))
 loaded_deaths=pickle.load(open('model_deaths.pkl','rb'))
+loaded_cases_plus_pred=pickle.load(open('model_cases_plus_pred.pkl','rb'))
+loaded_deaths_plus_pred=pickle.load(open('model_deaths_plus_pred.pkl','rb'))
+
 cases_pred_vsl=pickle.load(open('cases_figure.pkl','rb'))
-deaths_pred_vsl=pickle.load(open('deaths_figure.pkl','rb'))
+deaths_pred_vsl=pickle.load(open('deaths_figure.pkl','rb'))'''
                                                         
