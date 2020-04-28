@@ -54,7 +54,7 @@ from sklearn.metrics import mean_absolute_error
 
 
  # Transform our cases data for polynomial regression
-poly = PolynomialFeatures(degree=6)
+poly = PolynomialFeatures(degree=5)
 poly_X_train = poly.fit_transform(X_train)
 poly_X_test = poly.fit_transform(X_test)
 poly_future_forcast = poly.fit_transform(future_forcast)
@@ -89,7 +89,7 @@ plt.legend(loc = "upper left" , frameon = True, ncol = 2 , fancybox = True, fram
 plt.show();
 
 # Transform our death data for polynomial regression
-poly_death = PolynomialFeatures(degree=5)
+poly_death = PolynomialFeatures(degree=4)
 poly_X_train_death = poly_death.fit_transform(X_train_death)
 poly_X_test_death = poly_death.fit_transform(X_test_death)
 poly_future_forcast_death = poly_death.fit_transform(future_forcast_deaths)    
