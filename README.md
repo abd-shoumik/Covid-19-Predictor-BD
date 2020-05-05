@@ -1,4 +1,4 @@
-# Covid-19-Predictor-BD
+# Covid 19 Predictor Bangladesh
 
 
 ##  Goals
