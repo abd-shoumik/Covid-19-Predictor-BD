@@ -1,4 +1,5 @@
 # Covid 19 Predictor Bangladesh
+* Find **Github Pages** of this repository at https://abd-shoumik.github.io/Covid-19-Predictor-BD/
 
 
 ##  Goals
